@@ -6,6 +6,13 @@ python virtual environment
    source bin/activate
    pip install django==2.1.3
 
+   # Generate UML diagram of django app models
+   # Need pacman -S graphivz first
+   pip install pygraphviz
+   pip install django-extensions==2.1.3
+   # Add 'django_extensions' to INSTALLED_APPS in settings.py
+   python manage.py graph_models -a -o myapp_models.png
+
 docker
 ======
 .. code::bash
